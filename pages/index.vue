@@ -1,72 +1,50 @@
-<template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        frontend
-      </h1>
-      <h2 class="subtitle">
-        new face for sayrin
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+ 
+  div
+    .uk-container.uk-container-expand-right
+      div(class="uk-flex uk-flex-middle", uk-grid)
+        div(class="uk-width-2-5@m")
+          h1.uk-heading-large(class="uk-width-xlarge@l") Te ayudamos a construir tu producto.
+          p(class="uk-width-xlarge@l")  Whether you're going on a business trip or relocating to a new city.
+          .uk-margin  
+            a Get Started
+            a.uk-margin-small-left View Our Clients
+        div(clasS="uk-width-3-5@m")
+          div.uk-container-item-padding-remove-right
+            div
+              img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
+              img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
+            
+      //-div.text-home-container.uk-container.uk-flex.uk-flex-middle
+        h1.uk-heading-large(class="uk-width-xlarge@l") We help to build your product.
+      //-div.home-image.uk-width-1-2
+        img.uk-width-1-1(src="/images/home/home.png", alt="alt")
+
+
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 
 export default {
   components: {
-    Logo
+    
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss" scoped>
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .text-home-container{
+    position: relative;
+    z-index: 1;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .home-image{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
 
-.links {
-  padding-top: 15px;
-}
 </style>
