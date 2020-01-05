@@ -14,11 +14,12 @@
             div
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
-            
-      //-div.text-home-container.uk-container.uk-flex.uk-flex-middle
-        h1.uk-heading-large(class="uk-width-xlarge@l") We help to build your product.
-      //-div.home-image.uk-width-1-2
-        img.uk-width-1-1(src="/images/home/home.png", alt="alt")
+
+        form(name="contact", netifly)
+          input(type="text" name="name", placeholder="Nombre")
+          input(type="email" name="email", placeholder="Email")
+          button(type="submit") Send
+    
 
 
 </template>
