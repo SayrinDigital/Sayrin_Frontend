@@ -15,7 +15,7 @@
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
 
-        form(name="contact", method="POST", data-netlify="true")
+        form(name="contact", method="POST", data-netlify="true", data-netlify-honeypot="bot-field")
           input(type="hidden", name="form-name", value="contact")
           input(type="text" name="name", placeholder="Nombre")
           input(type="email" name="email", placeholder="Email")
