@@ -16,6 +16,7 @@
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
 
         form(name="contact", @submit.prevent="handleSubmit")
+          input(type="hidden", name="form-name", value="contact")
           input(type="text", name="name", v-model="form.name")
           input(type="email", name="email", v-model="form.email")
           textarea( name="message", v-model="form.message")
