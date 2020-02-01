@@ -120,4 +120,21 @@ export default {
 
     }
 
+    @media (max-width: 854px) {
+        .case-header-content{
+            margin-left: 0%;
+        }
+
+        .gallery-list{
+            display: inline-block;
+            grid-gap: 0;
+            grid-row-gap: 1rem;
+            grid-template-columns: repeat(1, 1fr);
+            &>div{
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
 </style>
