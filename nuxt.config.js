@@ -13,7 +13,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Staatliches&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700&display=swap' }
     ]
   },
   /*
@@ -43,13 +43,12 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    ['prismic-nuxt', {
-      endpoint: 'https://sayrin-website.cdn.prismic.io/api/v2',
-      linkResolver: function(doc, ctx) {
-        return '/'
-      }
-    }]
+    '@nuxtjs/prismic'
   ],
+  prismic: {
+    endpoint: 'https://sayrin-website.cdn.prismic.io/api/v2',
+    preview: '/preview'
+  },
   styleResources: {
     scss: [
       './assets/variables.scss',

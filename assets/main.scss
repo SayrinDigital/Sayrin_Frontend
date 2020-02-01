@@ -1,7 +1,39 @@
 h1,h2,h3,h4,h5,h6{
-    font-family: $title-font!important;
+    font-family: $title-font!important; 
+    color: $dark-color;
+}
+
+h1{
+    font-weight: 700!important;
+    letter-spacing: -.15rem;
+}
+
+h2, h3,h4,h5{
+    font-weight: 500;
+    letter-spacing: -.05rem;
 }
 
 p{
     font-size: 1.1rem;
+    line-height: 2.4rem;
+    font-family: $title-font!important;
+    font-weight: 300;
+    color: $soft-color;
+    &.quote{
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+    }
+}
+
+ul{
+    li{
+        font-family: $title-font;
+        font-weight: 300;
+    }
+}
+
+a{
+    font-family: $title-font;
+    font-weight: 300;
 }

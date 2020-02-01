@@ -14,13 +14,6 @@
             div
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
               img.uk-width-1-2(src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", alt="alt")
-
-        form(name="contact", @submit.prevent="handleSubmit")
-          input(type="hidden", name="form-name", value="contact")
-          input(type="text", name="name", v-model="form.name")
-          input(type="email", name="email", v-model="form.email")
-          textarea( name="message", v-model="form.message")
-          button(type="submit") Send
     
 
 
@@ -28,38 +21,18 @@
 
 <script>
 
-
 export default {
-  components: {
-    
-  },
-  data(){
-    return{
-       form: {
-        name: '',
-        email: '',
-        message: '',
-      },
+  
+  async asyncData({ $prismic, error }) {
+    let document = await $prismic.api.getSingle('home')
+
+    if (document) {
+      return { document }
+    } else {
+      error({ statusCode: 404, message: 'Page not found' })
     }
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&');
-    },
-    handleSubmit() {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'contact', ...this.form }),
-      })
-        .then(() => alert('Success!'))
-        .catch(error => alert(error));
-    },
   }
+
 }
 </script>
 
