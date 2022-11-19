@@ -14,7 +14,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/prismic": "^1.1.0",
     "@nuxtjs/style-resources": "^1.0.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "prismic-nuxt": "^0.5.3",
     "uikit": "^3.2.6"
   },
